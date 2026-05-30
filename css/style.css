@@ -85,8 +85,8 @@ h1 em,h2 em{font-style:italic;color:var(--copper)}
 .btn:hover .arrow{transform:translateX(4px)}
 
 /* ---------- header ---------- */
-.hdr{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0}
-.hdr.scrolled{background:rgba(251,250,247,.85);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:10px 0}
+.hdr{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0;background:rgba(251,250,247,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(233,228,218,.5)}
+.hdr.scrolled{background:rgba(251,250,247,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--line);padding:10px 0}
 .hdr-in{display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .logo img{height:42px;width:auto;transition:height .3s}
 .hdr.scrolled .logo img{height:36px}
@@ -129,6 +129,7 @@ h1 em,h2 em{font-style:italic;color:var(--copper)}
 .photo.zoom:hover img{transform:scale(1.05)}
 .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 55%,rgba(31,41,50,.28));pointer-events:none}
 .hero-art{aspect-ratio:4/5}
+.hero-art img{filter:brightness(1.25)}
 .hero-badge{position:absolute;top:18px;right:18px;z-index:2;background:var(--white);border-radius:var(--r-sm);padding:.85rem 1.1rem;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:.7rem}
 .hero-badge .dot{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--water),var(--water-soft));flex:0 0 auto;display:grid;place-items:center;color:#fff;font-size:.9rem}
 .hero-badge b{font-family:var(--serif);font-size:1rem;color:var(--navy);display:block;line-height:1.1}
@@ -345,6 +346,12 @@ a.cmethod:hover{background:rgba(255,255,255,.12);transform:translateX(3px)}
   body{padding-bottom:74px}
   .hero-cta .btn,.phero-cta .btn{flex:1}
 }
+@media(max-width:480px){
+  .hero-cta,.phero-cta{flex-direction:column}
+  .hero-cta .btn,.phero-cta .btn{width:100%;flex:none}
+  .hero-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem 1rem}
+  .hero-meta span{font-size:.72rem}
+}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
 /* =================================================================
@@ -361,7 +368,7 @@ a.cmethod:hover{background:rgba(255,255,255,.12);transform:translateX(3px)}
 .mark.light .ln{background:var(--copper-soft)}
 
 /* --- giant outlined watermark word behind a heading --- */
-.watermark{position:relative}
+.watermark{position:relative;overflow:hidden}
 .watermark .wm{position:absolute;top:-.55em;left:-.04em;z-index:0;font-family:var(--serif);font-weight:600;font-size:clamp(5rem,16vw,12rem);line-height:.8;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:1.5px var(--line);text-stroke:1.5px var(--line);pointer-events:none;user-select:none;white-space:nowrap}
 .watermark .wm.dark{-webkit-text-stroke-color:rgba(255,255,255,.07);text-stroke-color:rgba(255,255,255,.07)}
 .watermark > :not(.wm){position:relative;z-index:1}
