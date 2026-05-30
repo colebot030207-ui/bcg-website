@@ -330,6 +330,7 @@ a.cmethod:hover{background:rgba(255,255,255,.12);transform:translateX(3px)}
 @media(max-width:980px){
   .hero-in,.split,.cta-in,.frow{grid-template-columns:1fr}
   .hero-art{aspect-ratio:16/11;order:-1}
+  .split-media{aspect-ratio:16/9}
   .split.reverse .split-media,.frow.flip .frow-media{order:-1}
   .svc-grid,.proc-grid,.quotes,.gallery{grid-template-columns:1fr 1fr}
   .gallery .photo.tall{grid-row:auto;aspect-ratio:4/3}
