@@ -219,6 +219,7 @@ h1 em,h2 em{font-style:italic;color:var(--copper)}
 a.cmethod:hover{background:rgba(255,255,255,.12);transform:translateX(3px)}
 .cmethod .ic{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.1);display:grid;place-items:center;flex:0 0 auto;color:var(--water)}
 .cmethod .ic svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.cmethod > div{min-width:0;overflow-wrap:anywhere}
 .cmethod small{display:block;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 .cmethod b{font-family:var(--serif);font-size:1.12rem;font-weight:500}
 .csocial{display:flex;gap:1rem;margin-top:1.4rem}
@@ -345,6 +346,10 @@ a.cmethod:hover{background:rgba(255,255,255,.12);transform:translateX(3px)}
   .scall{display:block}
   body{padding-bottom:74px}
   .hero-cta .btn,.phero-cta .btn{flex:1}
+  /* quote form — mobile fixes */
+  .cta-in{padding:24px 20px}
+  .fld input,.fld select,.fld textarea{font-size:1rem;padding:.9rem .95rem}
+  .cmethod small{font-size:.82rem}
 }
 @media(max-width:480px){
   .hero-cta,.phero-cta{flex-direction:column}
